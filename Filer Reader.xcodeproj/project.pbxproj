@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		1128AAF8BCB66552A4253BD6 /* Pods_Filer_Reader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B06BCE9C67A5263713C4161 /* Pods_Filer_Reader.framework */; };
 		7D96CCFD571DD02F84E9876B /* Pods_Filer_ReaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DED38938D1FC9F3445977F /* Pods_Filer_ReaderTests.framework */; };
+		D2B7939B1F969BED0030A84C /* inputText.txt in Resources */ = {isa = PBXBuildFile; fileRef = D2B793981F969BED0030A84C /* inputText.txt */; };
+		D2B7939C1F969BED0030A84C /* inputText.txt in Resources */ = {isa = PBXBuildFile; fileRef = D2B7939A1F969BED0030A84C /* inputText.txt */; };
+		D2B7939F1F969C750030A84C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7939E1F969C740030A84C /* ViewController.swift */; };
+		D2B793A21F969CBB0030A84C /* FIleReaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B793A11F969CBB0030A84C /* FIleReaderManager.swift */; };
+		D2B793A71F96A0760030A84C /* WordCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B793A61F96A0760030A84C /* WordCountModel.swift */; };
 		D2F86CDE1F9698ED00D90014 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F86CDD1F9698ED00D90014 /* AppDelegate.swift */; };
-		D2F86CE01F9698ED00D90014 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F86CDF1F9698ED00D90014 /* ViewController.swift */; };
 		D2F86CE31F9698ED00D90014 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F86CE11F9698ED00D90014 /* Main.storyboard */; };
 		D2F86CE51F9698ED00D90014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F86CE41F9698ED00D90014 /* Assets.xcassets */; };
 		D2F86CE81F9698ED00D90014 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F86CE61F9698ED00D90014 /* LaunchScreen.storyboard */; };
@@ -34,9 +38,13 @@
 		959EBC451A983C5AB05AE8C2 /* Pods-Filer Reader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filer Reader.release.xcconfig"; path = "Pods/Target Support Files/Pods-Filer Reader/Pods-Filer Reader.release.xcconfig"; sourceTree = "<group>"; };
 		A5DED38938D1FC9F3445977F /* Pods_Filer_ReaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Filer_ReaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E3C18B580BE0AC9FD25AA9 /* Pods-Filer ReaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filer ReaderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Filer ReaderTests/Pods-Filer ReaderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2B793981F969BED0030A84C /* inputText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = inputText.txt; sourceTree = "<group>"; };
+		D2B7939A1F969BED0030A84C /* inputText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = inputText.txt; sourceTree = "<group>"; };
+		D2B7939E1F969C740030A84C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D2B793A11F969CBB0030A84C /* FIleReaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIleReaderManager.swift; sourceTree = "<group>"; };
+		D2B793A61F96A0760030A84C /* WordCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCountModel.swift; sourceTree = "<group>"; };
 		D2F86CDA1F9698ED00D90014 /* Filer Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Filer Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F86CDD1F9698ED00D90014 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D2F86CDF1F9698ED00D90014 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D2F86CE21F9698ED00D90014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2F86CE41F9698ED00D90014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2F86CE71F9698ED00D90014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,10 +74,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2B793951F969B650030A84C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D2B793961F969B750030A84C /* Files */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D2B793961F969B750030A84C /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2B793971F969BED0030A84C /* big */,
+				D2B793991F969BED0030A84C /* small */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		D2B793971F969BED0030A84C /* big */ = {
+			isa = PBXGroup;
+			children = (
+				D2B793981F969BED0030A84C /* inputText.txt */,
+			);
+			path = big;
+			sourceTree = "<group>";
+		};
+		D2B793991F969BED0030A84C /* small */ = {
+			isa = PBXGroup;
+			children = (
+				D2B7939A1F969BED0030A84C /* inputText.txt */,
+			);
+			path = small;
+			sourceTree = "<group>";
+		};
+		D2B7939D1F969C610030A84C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2B7939E1F969C740030A84C /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D2B793A01F969C900030A84C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D2B793A11F969CBB0030A84C /* FIleReaderManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D2B793A31F969D2F0030A84C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2B793A41F969D400030A84C /* UITableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D2B793A41F969D400030A84C /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		D2B793A51F969E750030A84C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2B793A61F96A0760030A84C /* WordCountModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D2F86CD11F9698ED00D90014 = {
 			isa = PBXGroup;
 			children = (
 				D2F86CDC1F9698ED00D90014 /* Filer Reader */,
+				D2B793951F969B650030A84C /* Resources */,
 				D2F86CF11F9698ED00D90014 /* Filer ReaderTests */,
 				D2F86CDB1F9698ED00D90014 /* Products */,
 				F26969B402AE6FAA91C2BE22 /* Pods */,
@@ -89,8 +170,11 @@
 		D2F86CDC1F9698ED00D90014 /* Filer Reader */ = {
 			isa = PBXGroup;
 			children = (
+				D2B793A01F969C900030A84C /* Managers */,
+				D2B793A51F969E750030A84C /* Models */,
+				D2B7939D1F969C610030A84C /* ViewControllers */,
+				D2B793A31F969D2F0030A84C /* Views */,
 				D2F86CDD1F9698ED00D90014 /* AppDelegate.swift */,
-				D2F86CDF1F9698ED00D90014 /* ViewController.swift */,
 				D2F86CE11F9698ED00D90014 /* Main.storyboard */,
 				D2F86CE41F9698ED00D90014 /* Assets.xcassets */,
 				D2F86CE61F9698ED00D90014 /* LaunchScreen.storyboard */,
@@ -217,8 +301,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B7939B1F969BED0030A84C /* inputText.txt in Resources */,
 				D2F86CE81F9698ED00D90014 /* LaunchScreen.storyboard in Resources */,
 				D2F86CE51F9698ED00D90014 /* Assets.xcassets in Resources */,
+				D2B7939C1F969BED0030A84C /* inputText.txt in Resources */,
 				D2F86CE31F9698ED00D90014 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,7 +416,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2F86CE01F9698ED00D90014 /* ViewController.swift in Sources */,
+				D2B793A21F969CBB0030A84C /* FIleReaderManager.swift in Sources */,
+				D2B793A71F96A0760030A84C /* WordCountModel.swift in Sources */,
+				D2B7939F1F969C750030A84C /* ViewController.swift in Sources */,
 				D2F86CDE1F9698ED00D90014 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
