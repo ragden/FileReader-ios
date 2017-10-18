@@ -24,3 +24,5 @@ Pods/Target Support Files/Pods-Filer ReaderTests/Pods-Filer ReaderTests-umbrella
 Pods/Target Support Files/Pods-Filer ReaderTests/Pods-Filer ReaderTests.debug.xcconfig
 Pods/Target Support Files/Pods-Filer ReaderTests/Pods-Filer ReaderTests.modulemap
 Pods/Target Support Files/Pods-Filer ReaderTests/Pods-Filer ReaderTests.release.xcconfig
+Breakpoints_v2.xcbkptlist
+xcschememanagement.plist
