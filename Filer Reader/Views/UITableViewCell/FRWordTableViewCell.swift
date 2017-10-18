@@ -9,16 +9,26 @@
 import UIKit
 
 class FRWordTableViewCell: UITableViewCell {
-
+    static let identifier : String = "cell"
+    
+    @IBOutlet weak var leftLabel: UILabel!
+    @IBOutlet weak var rightLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        leftLabel.textColor = UIColor.corporateBlue
+        rightLabel.textColor = UIColor.corporateLightBlue
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func loadData(data: WordCount) {
+        //Do stuff
     }
 
 }
