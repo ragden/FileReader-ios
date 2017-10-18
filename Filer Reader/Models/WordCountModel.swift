@@ -23,6 +23,8 @@ class WordCountModel: NSObject {
     func readFromFile(completion: @escaping () -> ()) {
         DispatchQueue.global(qos: .background).async {
             let fileContent : String = FIleReaderManager.readFile("inputText")
+            
+            // escape trash characters
             var finalContent = fileContent.replacingOccurrences(of: ",", with: "")
             finalContent = finalContent.replacingOccurrences(of: ".", with: "")
             finalContent = finalContent.replacingOccurrences(of: ":", with: "")

@@ -39,11 +39,14 @@ class ViewController: UIViewController {
     }
     
     @objc func orderButtonSelected() {
-        let title : String = NSLocalizedString("key.order", comment: "Ordenar")
-        let message = "\n\n\n\n\n\n\n\n\n\n"
-        let alert : UIAlertController = UIAlertController(title: title, message: message, preferredStyle:.actionSheet)
+        let screenBounds = UIScreen.main.bounds
         
-        let pickerFrame: CGRect = CGRect(x:17, y:52, width:270, height:100)
+        let title : String = NSLocalizedString("key.order", comment: "Ordenar")
+        let alert : UIAlertController = UIAlertController(title: title, message: nil, preferredStyle:.actionSheet)
+        let height:NSLayoutConstraint = NSLayoutConstraint(item: alert.view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 168)
+        alert.view.addConstraint(height);
+        
+        let pickerFrame: CGRect = CGRect(x:0, y:20, width:screenBounds.width , height:150)
         picker = UIPickerView(frame: pickerFrame)
         
         picker.delegate = self
@@ -51,19 +54,12 @@ class ViewController: UIViewController {
         
         alert.view.addSubview(picker)
         
-        let toolFrame = CGRect(x:17, y:5, width:270, height:45)
+        let toolFrame = CGRect(x:17, y:5, width:screenBounds.width - 34, height:45)
         let toolView: UIView = UIView(frame: toolFrame)
         
-//        var buttonCancelFrame: CGRect = CGRect(0, 7, 100, 30);
-//
-//        var buttonCancel: UIButton = UIButton(frame: buttonCancelFrame);
-//        buttonCancel.setTitle("Cancel", forState: UIControlState.Normal);
-//        buttonCancel.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal);
-//        toolView.addSubview(buttonCancel); //add it to the toolView
-//
-//        buttonCancel.addTarget(self, action: "cancelSelection:", forControlEvents: UIControlEvents.TouchDown);
-        
-        let buttonOkFrame: CGRect = CGRect(x:170, y:7, width:100, height:30);
+        let buttonWidth = 100
+        let xPosition = Int(screenBounds.width) - (buttonWidth + 30)
+        let buttonOkFrame: CGRect = CGRect(x:xPosition, y:7, width:buttonWidth, height:30);
         
         let buttonOk: UIButton = UIButton(frame: buttonOkFrame);
         buttonOk.setTitle(NSLocalizedString("key.done", comment: "Hecho"), for: .normal);
