@@ -9,12 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    let model = WordCountModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let model = WordCountModel()
-        model.readFromFile()
+        
+        model.readFromFile {
+            
+        }
         
     }
 
@@ -26,3 +29,18 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController : UITableViewDelegate {
+    
+}
+
+extension ViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return model.datasource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    
+}

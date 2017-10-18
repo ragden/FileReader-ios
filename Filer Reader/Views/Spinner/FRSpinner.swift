@@ -20,20 +20,32 @@ class FRSpinner: UIView {
     */
     init() {
         let screenBounds : CGRect = UIScreen.main.bounds
-        self.frame = CGRect(x: 0, y: 0, width: screenBounds.size.width, height: screenBounds.size.height)
-        self.backgroundView.frame = self.frame
-        self.backgroundView.backgroundColor = UIColor.corporateLightBlue
-        self.backgroundView.alpha = 0.5
-        self.addSubview(self.backgroundView)
+        let targetFrame = CGRect(x: 0, y: 0, width: screenBounds.size.width, height: screenBounds.size.height)
+        super.init(frame: targetFrame)
         
-        self.indicator.backgroundColor = UIColor.corporateBlue
-        self.indicator.center = self.center
-        self.addSubview(self.indicator)
+        backgroundView.frame = frame
+        backgroundView.backgroundColor = UIColor.corporateLightBlue
+        backgroundView.alpha = 0.5
+        addSubview(backgroundView)
         
+        indicator.backgroundColor = UIColor.corporateBlue
+        indicator.center = center
+        addSubview(indicator)
     }
     
     required init?(coder aDecoder: NSCoder) {
-
+        let screenBounds : CGRect = UIScreen.main.bounds
+        let targetFrame = CGRect(x: 0, y: 0, width: screenBounds.size.width, height: screenBounds.size.height)
+        super.init(frame: targetFrame)
+        
+        backgroundView.frame = frame
+        backgroundView.backgroundColor = UIColor.corporateLightBlue
+        backgroundView.alpha = 0.5
+        addSubview(backgroundView)
+        
+        indicator.backgroundColor = UIColor.corporateBlue
+        indicator.center = center
+        addSubview(indicator)
     }
     
     func start(_ inController: UIViewController) {
