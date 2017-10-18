@@ -8,9 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		1128AAF8BCB66552A4253BD6 /* Pods_Filer_Reader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B06BCE9C67A5263713C4161 /* Pods_Filer_Reader.framework */; };
+		6938C1961F977EF8008BCDD0 /* UIColor+Corporate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6938C1951F977EF8008BCDD0 /* UIColor+Corporate.swift */; };
+		6938C1A01F978056008BCDD0 /* FRSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6938C19D1F978056008BCDD0 /* FRSpinner.swift */; };
+		6938C1A11F978056008BCDD0 /* FRWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6938C19F1F978056008BCDD0 /* FRWordTableViewCell.swift */; };
 		7D96CCFD571DD02F84E9876B /* Pods_Filer_ReaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5DED38938D1FC9F3445977F /* Pods_Filer_ReaderTests.framework */; };
+		D2B7939F1F969C750030A84C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7939E1F969C740030A84C /* ViewController.swift */; };
+		D2B793A21F969CBB0030A84C /* FIleReaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B793A11F969CBB0030A84C /* FIleReaderManager.swift */; };
+		D2B793A71F96A0760030A84C /* WordCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B793A61F96A0760030A84C /* WordCountModel.swift */; };
+		D2E66FFF1F97EED1002EB5AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2E66FFE1F97EED1002EB5AA /* Localizable.strings */; };
+		D2E670031F9806CF002EB5AA /* FIleReaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B793A11F969CBB0030A84C /* FIleReaderManager.swift */; };
+		D2E670041F9806CF002EB5AA /* FRSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6938C19D1F978056008BCDD0 /* FRSpinner.swift */; };
+		D2E670051F9806CF002EB5AA /* FRWordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6938C19F1F978056008BCDD0 /* FRWordTableViewCell.swift */; };
+		D2E670061F9806CF002EB5AA /* UIColor+Corporate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6938C1951F977EF8008BCDD0 /* UIColor+Corporate.swift */; };
+		D2E670071F9806CF002EB5AA /* WordCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B793A61F96A0760030A84C /* WordCountModel.swift */; };
+		D2E670081F9806CF002EB5AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7939E1F969C740030A84C /* ViewController.swift */; };
+		D2E670091F9806CF002EB5AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F86CDD1F9698ED00D90014 /* AppDelegate.swift */; };
+		D2E6700B1F9806CF002EB5AA /* Pods_Filer_Reader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B06BCE9C67A5263713C4161 /* Pods_Filer_Reader.framework */; };
+		D2E6700E1F9806CF002EB5AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2E66FFE1F97EED1002EB5AA /* Localizable.strings */; };
+		D2E6700F1F9806CF002EB5AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F86CE61F9698ED00D90014 /* LaunchScreen.storyboard */; };
+		D2E670101F9806CF002EB5AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F86CE41F9698ED00D90014 /* Assets.xcassets */; };
+		D2E670111F9806CF002EB5AA /* inputText.txt in Resources */ = {isa = PBXBuildFile; fileRef = D2B7939A1F969BED0030A84C /* inputText.txt */; };
+		D2E670121F9806CF002EB5AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F86CE11F9698ED00D90014 /* Main.storyboard */; };
+		D2E6701A1F980739002EB5AA /* inputText.txt in Resources */ = {isa = PBXBuildFile; fileRef = D2B793981F969BED0030A84C /* inputText.txt */; };
 		D2F86CDE1F9698ED00D90014 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F86CDD1F9698ED00D90014 /* AppDelegate.swift */; };
-		D2F86CE01F9698ED00D90014 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F86CDF1F9698ED00D90014 /* ViewController.swift */; };
 		D2F86CE31F9698ED00D90014 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F86CE11F9698ED00D90014 /* Main.storyboard */; };
 		D2F86CE51F9698ED00D90014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F86CE41F9698ED00D90014 /* Assets.xcassets */; };
 		D2F86CE81F9698ED00D90014 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F86CE61F9698ED00D90014 /* LaunchScreen.storyboard */; };
@@ -30,13 +50,23 @@
 /* Begin PBXFileReference section */
 		04A6153A17A01BB022B32208 /* Pods-Filer Reader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filer Reader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Filer Reader/Pods-Filer Reader.debug.xcconfig"; sourceTree = "<group>"; };
 		2B06BCE9C67A5263713C4161 /* Pods_Filer_Reader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Filer_Reader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6938C1951F977EF8008BCDD0 /* UIColor+Corporate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Corporate.swift"; sourceTree = "<group>"; };
+		6938C19D1F978056008BCDD0 /* FRSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRSpinner.swift; sourceTree = "<group>"; };
+		6938C19F1F978056008BCDD0 /* FRWordTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FRWordTableViewCell.swift; sourceTree = "<group>"; };
 		739C1F742B6D109E4D11E2DA /* Pods-Filer ReaderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filer ReaderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Filer ReaderTests/Pods-Filer ReaderTests.release.xcconfig"; sourceTree = "<group>"; };
 		959EBC451A983C5AB05AE8C2 /* Pods-Filer Reader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filer Reader.release.xcconfig"; path = "Pods/Target Support Files/Pods-Filer Reader/Pods-Filer Reader.release.xcconfig"; sourceTree = "<group>"; };
 		A5DED38938D1FC9F3445977F /* Pods_Filer_ReaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Filer_ReaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5E3C18B580BE0AC9FD25AA9 /* Pods-Filer ReaderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Filer ReaderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Filer ReaderTests/Pods-Filer ReaderTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D2F86CDA1F9698ED00D90014 /* Filer Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Filer Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2B793981F969BED0030A84C /* inputText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = inputText.txt; sourceTree = "<group>"; };
+		D2B7939A1F969BED0030A84C /* inputText.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = inputText.txt; sourceTree = "<group>"; };
+		D2B7939E1F969C740030A84C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D2B793A11F969CBB0030A84C /* FIleReaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIleReaderManager.swift; sourceTree = "<group>"; };
+		D2B793A61F96A0760030A84C /* WordCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCountModel.swift; sourceTree = "<group>"; };
+		D2E66FFE1F97EED1002EB5AA /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		D2E670181F9806CF002EB5AA /* Filer Reader Big.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Filer Reader Big.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2E670191F9806CF002EB5AA /* Filer Reader copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Filer Reader copy-Info.plist"; path = "/Users/ragden/Documents/Proyectos/Edgar/iSalud/proyecto/codigo/Filer Reader/Filer Reader copy-Info.plist"; sourceTree = "<absolute>"; };
+		D2F86CDA1F9698ED00D90014 /* Filer Reader Small.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Filer Reader Small.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F86CDD1F9698ED00D90014 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D2F86CDF1F9698ED00D90014 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D2F86CE21F9698ED00D90014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2F86CE41F9698ED00D90014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2F86CE71F9698ED00D90014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +77,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D2E6700A1F9806CF002EB5AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2E6700B1F9806CF002EB5AA /* Pods_Filer_Reader.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2F86CD71F9698ED00D90014 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -66,22 +104,124 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6938C1931F977EBB008BCDD0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6938C1941F977EC5008BCDD0 /* Color */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6938C1941F977EC5008BCDD0 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				6938C1951F977EF8008BCDD0 /* UIColor+Corporate.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		6938C19B1F978056008BCDD0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6938C19C1F978056008BCDD0 /* Spinner */,
+				6938C19E1F978056008BCDD0 /* UITableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6938C19C1F978056008BCDD0 /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				6938C19D1F978056008BCDD0 /* FRSpinner.swift */,
+			);
+			path = Spinner;
+			sourceTree = "<group>";
+		};
+		6938C19E1F978056008BCDD0 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6938C19F1F978056008BCDD0 /* FRWordTableViewCell.swift */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		D2B793951F969B650030A84C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D2B793961F969B750030A84C /* Files */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D2B793961F969B750030A84C /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2B793971F969BED0030A84C /* small */,
+				D2B793991F969BED0030A84C /* big */,
+				D2E66FFE1F97EED1002EB5AA /* Localizable.strings */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
+		D2B793971F969BED0030A84C /* small */ = {
+			isa = PBXGroup;
+			children = (
+				D2B793981F969BED0030A84C /* inputText.txt */,
+			);
+			path = small;
+			sourceTree = "<group>";
+		};
+		D2B793991F969BED0030A84C /* big */ = {
+			isa = PBXGroup;
+			children = (
+				D2B7939A1F969BED0030A84C /* inputText.txt */,
+			);
+			path = big;
+			sourceTree = "<group>";
+		};
+		D2B7939D1F969C610030A84C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D2B7939E1F969C740030A84C /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D2B793A01F969C900030A84C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D2B793A11F969CBB0030A84C /* FIleReaderManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D2B793A51F969E750030A84C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D2B793A61F96A0760030A84C /* WordCountModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D2F86CD11F9698ED00D90014 = {
 			isa = PBXGroup;
 			children = (
 				D2F86CDC1F9698ED00D90014 /* Filer Reader */,
+				D2B793951F969B650030A84C /* Resources */,
 				D2F86CF11F9698ED00D90014 /* Filer ReaderTests */,
 				D2F86CDB1F9698ED00D90014 /* Products */,
 				F26969B402AE6FAA91C2BE22 /* Pods */,
 				E6783219E81583ED70FBA693 /* Frameworks */,
+				D2E670191F9806CF002EB5AA /* Filer Reader copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		D2F86CDB1F9698ED00D90014 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2F86CDA1F9698ED00D90014 /* Filer Reader.app */,
+				D2F86CDA1F9698ED00D90014 /* Filer Reader Small.app */,
 				D2F86CEE1F9698ED00D90014 /* Filer ReaderTests.xctest */,
+				D2E670181F9806CF002EB5AA /* Filer Reader Big.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,8 +229,12 @@
 		D2F86CDC1F9698ED00D90014 /* Filer Reader */ = {
 			isa = PBXGroup;
 			children = (
+				6938C1931F977EBB008BCDD0 /* Extensions */,
+				D2B793A01F969C900030A84C /* Managers */,
+				D2B793A51F969E750030A84C /* Models */,
+				D2B7939D1F969C610030A84C /* ViewControllers */,
+				6938C19B1F978056008BCDD0 /* Views */,
 				D2F86CDD1F9698ED00D90014 /* AppDelegate.swift */,
-				D2F86CDF1F9698ED00D90014 /* ViewController.swift */,
 				D2F86CE11F9698ED00D90014 /* Main.storyboard */,
 				D2F86CE41F9698ED00D90014 /* Assets.xcassets */,
 				D2F86CE61F9698ED00D90014 /* LaunchScreen.storyboard */,
@@ -131,9 +275,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D2F86CD91F9698ED00D90014 /* Filer Reader */ = {
+		D2E670001F9806CF002EB5AA /* Filer Reader Big */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D2F86CF71F9698ED00D90014 /* Build configuration list for PBXNativeTarget "Filer Reader" */;
+			buildConfigurationList = D2E670151F9806CF002EB5AA /* Build configuration list for PBXNativeTarget "Filer Reader Big" */;
+			buildPhases = (
+				D2E670011F9806CF002EB5AA /* [CP] Check Pods Manifest.lock */,
+				D2E670021F9806CF002EB5AA /* Sources */,
+				D2E6700A1F9806CF002EB5AA /* Frameworks */,
+				D2E6700C1F9806CF002EB5AA /* Resources */,
+				D2E670131F9806CF002EB5AA /* [CP] Embed Pods Frameworks */,
+				D2E670141F9806CF002EB5AA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Filer Reader Big";
+			productName = "Filer Reader";
+			productReference = D2E670181F9806CF002EB5AA /* Filer Reader Big.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D2F86CD91F9698ED00D90014 /* Filer Reader Small */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2F86CF71F9698ED00D90014 /* Build configuration list for PBXNativeTarget "Filer Reader Small" */;
 			buildPhases = (
 				71CF3C91574CF50221681003 /* [CP] Check Pods Manifest.lock */,
 				D2F86CD61F9698ED00D90014 /* Sources */,
@@ -146,9 +310,9 @@
 			);
 			dependencies = (
 			);
-			name = "Filer Reader";
+			name = "Filer Reader Small";
 			productName = "Filer Reader";
-			productReference = D2F86CDA1F9698ED00D90014 /* Filer Reader.app */;
+			productReference = D2F86CDA1F9698ED00D90014 /* Filer Reader Small.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D2F86CED1F9698ED00D90014 /* Filer ReaderTests */ = {
@@ -182,6 +346,9 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "edgar paz moreno";
 				TargetAttributes = {
+					D2E670001F9806CF002EB5AA = {
+						ProvisioningStyle = Automatic;
+					};
 					D2F86CD91F9698ED00D90014 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -206,19 +373,34 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2F86CD91F9698ED00D90014 /* Filer Reader */,
+				D2F86CD91F9698ED00D90014 /* Filer Reader Small */,
+				D2E670001F9806CF002EB5AA /* Filer Reader Big */,
 				D2F86CED1F9698ED00D90014 /* Filer ReaderTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D2E6700C1F9806CF002EB5AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2E6700E1F9806CF002EB5AA /* Localizable.strings in Resources */,
+				D2E6700F1F9806CF002EB5AA /* LaunchScreen.storyboard in Resources */,
+				D2E670101F9806CF002EB5AA /* Assets.xcassets in Resources */,
+				D2E670111F9806CF002EB5AA /* inputText.txt in Resources */,
+				D2E670121F9806CF002EB5AA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2F86CD81F9698ED00D90014 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E66FFF1F97EED1002EB5AA /* Localizable.strings in Resources */,
 				D2F86CE81F9698ED00D90014 /* LaunchScreen.storyboard in Resources */,
 				D2F86CE51F9698ED00D90014 /* Assets.xcassets in Resources */,
+				D2E6701A1F980739002EB5AA /* inputText.txt in Resources */,
 				D2F86CE31F9698ED00D90014 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,9 +436,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Filer ReaderTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -269,9 +454,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Filer Reader-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -291,6 +479,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Filer Reader/Pods-Filer Reader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2E670011F9806CF002EB5AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Filer Reader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D2E670131F9806CF002EB5AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Filer Reader/Pods-Filer Reader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2E670141F9806CF002EB5AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Filer Reader/Pods-Filer Reader-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EC04DB5D7B5758892B96764F /* [CP] Copy Pods Resources */ = {
@@ -326,11 +562,30 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D2E670021F9806CF002EB5AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2E670031F9806CF002EB5AA /* FIleReaderManager.swift in Sources */,
+				D2E670041F9806CF002EB5AA /* FRSpinner.swift in Sources */,
+				D2E670051F9806CF002EB5AA /* FRWordTableViewCell.swift in Sources */,
+				D2E670061F9806CF002EB5AA /* UIColor+Corporate.swift in Sources */,
+				D2E670071F9806CF002EB5AA /* WordCountModel.swift in Sources */,
+				D2E670081F9806CF002EB5AA /* ViewController.swift in Sources */,
+				D2E670091F9806CF002EB5AA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2F86CD61F9698ED00D90014 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2F86CE01F9698ED00D90014 /* ViewController.swift in Sources */,
+				D2B793A21F969CBB0030A84C /* FIleReaderManager.swift in Sources */,
+				6938C1A01F978056008BCDD0 /* FRSpinner.swift in Sources */,
+				6938C1A11F978056008BCDD0 /* FRWordTableViewCell.swift in Sources */,
+				6938C1961F977EF8008BCDD0 /* UIColor+Corporate.swift in Sources */,
+				D2B793A71F96A0760030A84C /* WordCountModel.swift in Sources */,
+				D2B7939F1F969C750030A84C /* ViewController.swift in Sources */,
 				D2F86CDE1F9698ED00D90014 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,7 +603,7 @@
 /* Begin PBXTargetDependency section */
 		D2F86CF01F9698ED00D90014 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D2F86CD91F9698ED00D90014 /* Filer Reader */;
+			target = D2F86CD91F9698ED00D90014 /* Filer Reader Small */;
 			targetProxy = D2F86CEF1F9698ED00D90014 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -373,6 +628,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D2E670161F9806CF002EB5AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04A6153A17A01BB022B32208 /* Pods-Filer Reader.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Filer Reader copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ragden.Filer-Reader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D2E670171F9806CF002EB5AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 959EBC451A983C5AB05AE8C2 /* Pods-Filer Reader.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Filer Reader copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ragden.Filer-Reader";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D2F86CF51F9698ED00D90014 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -547,6 +832,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D2E670151F9806CF002EB5AA /* Build configuration list for PBXNativeTarget "Filer Reader Big" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2E670161F9806CF002EB5AA /* Debug */,
+				D2E670171F9806CF002EB5AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D2F86CD51F9698ED00D90014 /* Build configuration list for PBXProject "Filer Reader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -556,7 +850,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D2F86CF71F9698ED00D90014 /* Build configuration list for PBXNativeTarget "Filer Reader" */ = {
+		D2F86CF71F9698ED00D90014 /* Build configuration list for PBXNativeTarget "Filer Reader Small" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D2F86CF81F9698ED00D90014 /* Debug */,
