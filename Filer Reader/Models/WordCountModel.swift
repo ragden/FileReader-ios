@@ -8,17 +8,27 @@
 
 import UIKit
 
+enum FileReaderOrder : Int {
+    case AppearOrder = 0
+    case Alphabetical = 1
+    case MostAppear = 2
+}
+
 class WordCountModel: NSObject {
     var datasource : [WordCount]
-    
     
     override init() {
         datasource = Array()
     }
     func readFromFile(completion: @escaping () -> ()) {
         DispatchQueue.global(qos: .background).async {
-            let fileContent = FIleReaderManager.readFile("inputText")
-            self.processString(fileContent: fileContent)
+            let fileContent : String = FIleReaderManager.readFile("inputText")
+            var finalContent = fileContent.replacingOccurrences(of: ",", with: "")
+            finalContent = finalContent.replacingOccurrences(of: ".", with: "")
+            finalContent = finalContent.replacingOccurrences(of: ":", with: "")
+            finalContent = finalContent.replacingOccurrences(of: "\n", with: "")
+            
+            self.processString(fileContent: finalContent)
             DispatchQueue.main.async {
                 completion()
             }
@@ -26,22 +36,52 @@ class WordCountModel: NSObject {
 
     }
     
+    func sortByAlphabetical(completion: @escaping () -> ()) {
+        DispatchQueue.global(qos: .background).async {
+            self.datasource = self.datasource.sorted(by: {$0.word < $1.word})
+            DispatchQueue.main.async {
+                completion()
+            }
+        }
+    }
+    
+    func sortByMostAppearingWord(completion: @escaping () -> ()) {
+        DispatchQueue.global(qos: .background).async {
+            self.datasource = self.datasource.sorted(by: {$0.count > $1.count})
+            DispatchQueue.main.async {
+                completion()
+            }
+        }
+    }
+    
+    func sortByAppearingOrder(completion: @escaping () -> ()) {
+        DispatchQueue.global(qos: .background).async {
+            self.datasource = self.datasource.sorted(by: {$0.order < $1.order})
+            DispatchQueue.main.async {
+                completion()
+            }
+        }
+    }
+    
+    // MARK: Private methods
+    
     private func processString(fileContent: String) {
         let stringArray : [String] = fileContent.components(separatedBy: CharacterSet(charactersIn: " \n"))
         var positionArray : [String] = Array()
         datasource.removeAll()
         
         for string in stringArray {
+            var word : WordCount
             if (positionArray.contains(string.capitalized)) {
                 let index : NSInteger = positionArray.index(of: string.capitalized)!
-                let word = datasource[index]
-                word.count = word.count + 1
+                word = datasource[index]
             }
             else {
-                let word = WordCount(word: string.capitalized, order: datasource.count)
+                word = WordCount(word: string.capitalized, order: datasource.count)
                 positionArray.append(string.capitalized)
                 datasource.append(word)
             }
+            word.count = word.count + 1
         }
     }
 }

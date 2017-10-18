@@ -28,7 +28,8 @@ class FRSpinner: UIView {
         backgroundView.alpha = 0.5
         addSubview(backgroundView)
         
-        indicator.backgroundColor = UIColor.corporateBlue
+        indicator.activityIndicatorViewStyle = .whiteLarge
+        indicator.color = UIColor.corporateBlue
         indicator.center = center
         addSubview(indicator)
     }
@@ -43,7 +44,7 @@ class FRSpinner: UIView {
         backgroundView.alpha = 0.5
         addSubview(backgroundView)
         
-        indicator.backgroundColor = UIColor.corporateBlue
+        indicator.color = UIColor.corporateBlue
         indicator.center = center
         addSubview(indicator)
     }

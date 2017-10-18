@@ -17,6 +17,7 @@
 		D2B7939F1F969C750030A84C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B7939E1F969C740030A84C /* ViewController.swift */; };
 		D2B793A21F969CBB0030A84C /* FIleReaderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B793A11F969CBB0030A84C /* FIleReaderManager.swift */; };
 		D2B793A71F96A0760030A84C /* WordCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B793A61F96A0760030A84C /* WordCountModel.swift */; };
+		D2E66FFF1F97EED1002EB5AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2E66FFE1F97EED1002EB5AA /* Localizable.strings */; };
 		D2F86CDE1F9698ED00D90014 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F86CDD1F9698ED00D90014 /* AppDelegate.swift */; };
 		D2F86CE31F9698ED00D90014 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2F86CE11F9698ED00D90014 /* Main.storyboard */; };
 		D2F86CE51F9698ED00D90014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2F86CE41F9698ED00D90014 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		D2B7939E1F969C740030A84C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D2B793A11F969CBB0030A84C /* FIleReaderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIleReaderManager.swift; sourceTree = "<group>"; };
 		D2B793A61F96A0760030A84C /* WordCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCountModel.swift; sourceTree = "<group>"; };
+		D2E66FFE1F97EED1002EB5AA /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		D2F86CDA1F9698ED00D90014 /* Filer Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Filer Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F86CDD1F9698ED00D90014 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2F86CE21F9698ED00D90014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				D2B793971F969BED0030A84C /* big */,
 				D2B793991F969BED0030A84C /* small */,
+				D2E66FFE1F97EED1002EB5AA /* Localizable.strings */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2B7939B1F969BED0030A84C /* inputText.txt in Resources */,
+				D2E66FFF1F97EED1002EB5AA /* Localizable.strings in Resources */,
 				D2F86CE81F9698ED00D90014 /* LaunchScreen.storyboard in Resources */,
 				D2F86CE51F9698ED00D90014 /* Assets.xcassets in Resources */,
 				D2B7939C1F969BED0030A84C /* inputText.txt in Resources */,
@@ -382,7 +386,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		71CF3C91574CF50221681003 /* [CP] Check Pods Manifest.lock */ = {
@@ -400,7 +404,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		CC49E305B00805CB68B39A78 /* [CP] Embed Pods Frameworks */ = {

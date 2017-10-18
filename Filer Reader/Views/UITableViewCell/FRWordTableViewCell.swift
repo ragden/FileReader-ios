@@ -19,6 +19,7 @@ class FRWordTableViewCell: UITableViewCell {
         // Initialization code
         leftLabel.textColor = UIColor.corporateBlue
         rightLabel.textColor = UIColor.corporateLightBlue
+        selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,6 +30,8 @@ class FRWordTableViewCell: UITableViewCell {
     
     func loadData(data: WordCount) {
         //Do stuff
+        leftLabel.text = data.word
+        rightLabel.text = NSLocalizedString("key.appears", comment: "aparece: ") + "\(data.count)"
     }
 
 }

@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Filer Reader
+
+  Created by edgar paz moreno on 18/10/17.
+  Copyright © 2017 edgar paz moreno. All rights reserved.
+*/
+
+"key.appears" = "aparece: ";
+"key.done" = "Hecho";
+"key.order" = "Ordenar";
+"key.order.appear" = "Orden aparición";
+"key.order.most.appears" = "Más apariciones";
+"key.order.alphabetical" = "Alfabético";
+
