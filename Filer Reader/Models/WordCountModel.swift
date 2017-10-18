@@ -15,9 +15,15 @@ class WordCountModel: NSObject {
     override init() {
         datasource = Array()
     }
-    func readFromFile(completion: () -> ()) {
-        let fileContent = FIleReaderManager.readFile("inputText")
-        self.processString(fileContent: fileContent)
+    func readFromFile(completion: @escaping () -> ()) {
+        DispatchQueue.global(qos: .background).async {
+            let fileContent = FIleReaderManager.readFile("inputText")
+            self.processString(fileContent: fileContent)
+            DispatchQueue.main.async {
+                completion()
+            }
+        }
+
     }
     
     private func processString(fileContent: String) {
