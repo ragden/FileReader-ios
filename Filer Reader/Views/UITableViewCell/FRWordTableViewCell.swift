@@ -25,11 +25,9 @@ class FRWordTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     func loadData(data: WordCount) {
-        //Do stuff
         leftLabel.text = data.word
         rightLabel.text = NSLocalizedString("key.appears", comment: "aparece: ") + "\(data.count)"
     }

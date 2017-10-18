@@ -24,11 +24,10 @@ class WordCountModel: NSObject {
         DispatchQueue.global(qos: .background).async {
             let fileContent : String = FIleReaderManager.readFile("inputText")
             
-            // escape trash characters
+            // purge trash characters
             var finalContent = fileContent.replacingOccurrences(of: ",", with: "")
             finalContent = finalContent.replacingOccurrences(of: ".", with: "")
             finalContent = finalContent.replacingOccurrences(of: ":", with: "")
-            finalContent = finalContent.replacingOccurrences(of: "\n", with: "")
             
             self.processString(fileContent: finalContent)
             DispatchQueue.main.async {
@@ -73,17 +72,19 @@ class WordCountModel: NSObject {
         datasource.removeAll()
         
         for string in stringArray {
-            var word : WordCount
-            if (positionArray.contains(string.capitalized)) {
-                let index : NSInteger = positionArray.index(of: string.capitalized)!
-                word = datasource[index]
+            if string.characters.count > 0 {
+                var word : WordCount
+                if (positionArray.contains(string.capitalized)) {
+                    let index : NSInteger = positionArray.index(of: string.capitalized)!
+                    word = datasource[index]
+                }
+                else {
+                    word = WordCount(word: string.capitalized, order: datasource.count)
+                    positionArray.append(string.capitalized)
+                    datasource.append(word)
+                }
+                word.count = word.count + 1
             }
-            else {
-                word = WordCount(word: string.capitalized, order: datasource.count)
-                positionArray.append(string.capitalized)
-                datasource.append(word)
-            }
-            word.count = word.count + 1
         }
     }
 }

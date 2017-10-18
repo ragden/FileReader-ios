@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
     
     func configureUI() {
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
         self.dismiss(animated: true, completion: nil);
     }
     
-    // MARK - Logic methods
+    // MARK: - Logic methods
     func readData() {
         spinner.start(self)
         model.readFromFile {
@@ -109,12 +109,7 @@ class ViewController: UIViewController {
 
 }
 
-// MARK - UITableViewDelegate
-extension ViewController : UITableViewDelegate {
-    
-}
-
-// MARK - UITableViewDataSource
+// MARK: - UITableViewDataSource
 extension ViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.datasource.count
@@ -127,14 +122,14 @@ extension ViewController : UITableViewDataSource {
     }
 }
 
-// MARK - UIPickerViewDelegate
+// MARK: - UIPickerViewDelegate
 extension ViewController : UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
 }
 
-// MARK - UIPickerViewDataSource
+// MARK: - UIPickerViewDataSource
 extension ViewController : UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
